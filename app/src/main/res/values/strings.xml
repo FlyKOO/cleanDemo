@@ -10,10 +10,10 @@
     <string name="cache">缓存</string>
     <string name="junk">垃圾</string>
     <string name="duplicate">重复</string>
-    <string name="estimated_free_space">预计可释放: %1$sGB</string>
+    <string name="estimated_free_space">预计可释放: %1$s</string>
     <string name="progress_percentage">进度: %1$d%%</string>
-    <string name="used_space">已用: %1$sGB</string>
-    <string name="available_space">可用: %1$sGB</string>
+    <string name="used_space">已用: %1$s</string>
+    <string name="available_space">可用: %1$s</string>
     <string name="usage_percentage">使用率</string>
     <string name="used">已用</string>
     <string name="available">可用</string>

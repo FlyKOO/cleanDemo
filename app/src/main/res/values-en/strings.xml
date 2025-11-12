@@ -10,10 +10,10 @@
     <string name="cache">Cache</string>
     <string name="junk">Junk</string>
     <string name="duplicate">Duplicate</string>
-    <string name="estimated_free_space">Estimated free space: %1$sGB</string>
+    <string name="estimated_free_space">Estimated free space: %1$s</string>
     <string name="progress_percentage">Progress: %1$d%%</string>
-    <string name="used_space">Used: %1$sGB</string>
-    <string name="available_space">Available: %1$sGB</string>
+    <string name="used_space">Used: %1$s</string>
+    <string name="available_space">Available: %1$s</string>
     <string name="used">Used</string>
     <string name="available">Available</string>
     <string name="usage_percentage">Usage</string>

@@ -10,10 +10,10 @@
     <string name="cache">Pamięć podręczna</string>
     <string name="junk">Śmieci</string>
     <string name="duplicate">Duplikaty</string>
-    <string name="estimated_free_space">Szacowana wolna przestrzeń: %1$sGB</string>
+    <string name="estimated_free_space">Szacowana wolna przestrzeń: %1$s</string>
     <string name="progress_percentage">Postęp: %1$d%%</string>
-    <string name="used_space">Używane: %1$sGB</string>
-    <string name="available_space">Dostępne: %1$sGB</string>
+    <string name="used_space">Używane: %1$s</string>
+    <string name="available_space">Dostępne: %1$s</string>
     <string name="used">Używane</string>
     <string name="available">Dostępne</string>
     <string name="usage_percentage">Użycie</string>
