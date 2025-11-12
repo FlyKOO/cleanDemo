@@ -92,13 +92,7 @@ class AppManager(private val context: Context) {
             
             for (packageInfo in installedPackages) {
                 val appInfo = packageInfo.applicationInfo ?: continue
-                
-                // 跳过系统核心应用
-                if (appInfo.flags and ApplicationInfo.FLAG_SYSTEM != 0 && 
-                    appInfo.flags and ApplicationInfo.FLAG_UPDATED_SYSTEM_APP == 0) {
-                    continue
-                }
-                
+
                 val cacheSize = getAppCacheSize(appInfo)
                 val dataSize = getAppDataSize(appInfo)
                 val totalSize = cacheSize + dataSize
