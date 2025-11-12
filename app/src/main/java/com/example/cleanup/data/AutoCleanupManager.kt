@@ -2,13 +2,16 @@ package com.example.cleanup.data
 
 import android.content.Context
 import android.content.SharedPreferences
-import kotlinx.coroutines.CoroutineScope
+import androidx.work.Constraints
+import androidx.work.ExistingPeriodicWorkPolicy
+import androidx.work.NetworkType
+import androidx.work.PeriodicWorkRequestBuilder
+import androidx.work.WorkManager
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import java.util.concurrent.TimeUnit
 import com.example.cleanup.R
+import com.example.cleanup.work.AutoCleanupWorker
 
 class AutoCleanupManager(private val context: Context) {
     
@@ -335,6 +338,7 @@ class AutoCleanupManager(private val context: Context) {
      */
     fun setCleanupFrequency(frequency: CleanupFrequency) {
         prefs.edit().putLong(KEY_CLEANUP_FREQUENCY, frequency.hours).apply()
+        scheduleAutoCleanupWork()
     }
     
     /**
@@ -381,21 +385,55 @@ class AutoCleanupManager(private val context: Context) {
     /**
      * 启动自动清理监控
      */
-    fun startAutoCleanupMonitoring(scope: CoroutineScope) {
-        scope.launch {
-            while (true) {
-                try {
-                    if (shouldPerformAutoCleanup()) {
-                        performAutoCleanup()
-                    }
-                } catch (e: Exception) {
-                    println("自动清理监控异常: ${e.message}")
-                }
-                
-                // 每小时检查一次
-                delay(TimeUnit.HOURS.toMillis(1))
-            }
+    /**
+     * 使用 WorkManager 调度自动清理任务。
+     */
+    fun scheduleAutoCleanupWork() {
+        if (!settingsManager.isAutoCleanupEnabled()) {
+            cancelAutoCleanupWork()
+            return
         }
+
+        val frequency = getCleanupFrequency()
+        if (frequency == CleanupFrequency.MANUAL) {
+            cancelAutoCleanupWork()
+            return
+        }
+
+        val intervalHours = frequency.hours
+        val intervalMillis = TimeUnit.HOURS.toMillis(intervalHours)
+        val lastCleanupTime = prefs.getLong(KEY_LAST_CLEANUP, 0L)
+        val now = System.currentTimeMillis()
+        val timeSinceLastCleanup = if (lastCleanupTime == 0L) intervalMillis else now - lastCleanupTime
+        val initialDelay = intervalMillis - timeSinceLastCleanup
+        val safeInitialDelay = if (initialDelay < 0L) 0L else initialDelay
+
+        val constraints = Constraints.Builder()
+            .setRequiredNetworkType(NetworkType.NOT_REQUIRED)
+            .setRequiresBatteryNotLow(true)
+            .build()
+
+        val workRequest = PeriodicWorkRequestBuilder<AutoCleanupWorker>(intervalHours, TimeUnit.HOURS)
+            .setInitialDelay(safeInitialDelay, TimeUnit.MILLISECONDS)
+            .setConstraints(constraints)
+            .build()
+
+        WorkManager.getInstance(context).enqueueUniquePeriodicWork(
+            AUTO_CLEANUP_WORK_NAME,
+            ExistingPeriodicWorkPolicy.CANCEL_AND_REENQUEUE,
+            workRequest
+        )
+    }
+
+    /**
+     * 取消自动清理任务。
+     */
+    fun cancelAutoCleanupWork() {
+        WorkManager.getInstance(context).cancelUniqueWork(AUTO_CLEANUP_WORK_NAME)
+    }
+
+    companion object {
+        private const val AUTO_CLEANUP_WORK_NAME = "auto_cleanup_periodic_work"
     }
 }
 

@@ -5,6 +5,8 @@ import android.content.Context
 import android.content.res.Configuration
 import android.os.Build
 import androidx.lifecycle.DefaultLifecycleObserver
+import androidx.lifecycle.ProcessLifecycleOwner
+import com.example.cleanup.data.AutoCleanupManager
 import com.example.cleanup.data.SettingsManager
 import java.util.Locale
 
@@ -16,6 +18,7 @@ class CleanupApplication : Application(), DefaultLifecycleObserver {
         println("=== CleanupApplication.onCreate ===")
         // 在应用启动时设置语言环境
         setAppLanguage()
+        AutoCleanupManager(this).scheduleAutoCleanupWork()
     }
     
     override fun attachBaseContext(base: Context) {
