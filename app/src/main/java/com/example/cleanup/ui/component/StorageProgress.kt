@@ -1,5 +1,6 @@
 package com.example.cleanup.ui.component
 
+import android.text.format.Formatter
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -70,13 +71,13 @@ fun StorageProgress(
         ) {
             StorageInfoItem(
                 label = context.getString(R.string.used),
-                value = formatBytes(usedSpace),
+                value = Formatter.formatFileSize(context, usedSpace),
                 color = MaterialTheme.colorScheme.primary
             )
-            
+
             StorageInfoItem(
                 label = context.getString(R.string.available),
-                value = formatBytes(totalSpace - usedSpace),
+                value = Formatter.formatFileSize(context, totalSpace - usedSpace),
                 color = MaterialTheme.colorScheme.outline
             )
         }
@@ -146,19 +147,4 @@ private fun DrawScope.drawStorageProgress(
         size = Size(radius * 2, radius * 2),
         style = Stroke(width = strokeWidth, cap = StrokeCap.Round)
     )
-}
-
-private fun formatBytes(bytes: Long): String {
-    return when {
-        bytes >= 1024 * 1024 * 1024 -> {
-            String.format("%.1f GB", bytes / (1024.0 * 1024.0 * 1024.0))
-        }
-        bytes >= 1024 * 1024 -> {
-            String.format("%.1f MB", bytes / (1024.0 * 1024.0))
-        }
-        bytes >= 1024 -> {
-            String.format("%.1f KB", bytes / 1024.0)
-        }
-        else -> "$bytes B"
-    }
 }

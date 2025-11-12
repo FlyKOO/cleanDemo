@@ -1,5 +1,6 @@
 package com.example.cleanup.ui.screen
 
+import android.text.format.Formatter
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -113,13 +114,10 @@ fun DashboardScreen(
     // 本地状态
     var showParticles by remember { mutableStateOf(false) }
     
-    // 转换为GB显示
-    val cacheSize = storageInfo.toGB(cacheSizeBytes)
-    val junkSize = storageInfo.toGB(junkSizeBytes)
-    val duplicateSize = storageInfo.toGB(duplicateSizeBytes)
-    
     // 动画状态
     val cleanupAnimation = rememberCleanupAnimation(isActive = isCleaning)
+
+    val totalCleanableBytes = cacheSizeBytes + junkSizeBytes + duplicateSizeBytes
     
     // 清理完成后的处理
     LaunchedEffect(isCleaning) {
@@ -246,19 +244,19 @@ fun DashboardScreen(
                             ) {
                                 CleanupDetailItem(
                                     title = context.getString(R.string.cache),
-                                    size = "${"%.1f".format(cacheSize)}${context.getString(R.string.gb)}",
+                                    size = Formatter.formatFileSize(context, cacheSizeBytes),
                                     icon = Icons.Default.Delete
                                 )
-                                
+
                                 CleanupDetailItem(
                                     title = context.getString(R.string.junk),
-                                    size = "${"%.1f".format(junkSize)}${context.getString(R.string.gb)}",
+                                    size = Formatter.formatFileSize(context, junkSizeBytes),
                                     icon = Icons.Default.Delete
                                 )
-                                
+
                                 CleanupDetailItem(
                                     title = context.getString(R.string.duplicate),
-                                    size = "${"%.1f".format(duplicateSize)}${context.getString(R.string.gb)}",
+                                    size = Formatter.formatFileSize(context, duplicateSizeBytes),
                                     icon = Icons.Default.Delete
                                 )
                             }
@@ -271,13 +269,19 @@ fun DashboardScreen(
                             verticalArrangement = Arrangement.spacedBy(4.dp)
                         ) {
                             Text(
-                                text = context.getString(R.string.available_space, "%.1f".format(storageInfo.toGB(storageInfo.availableSpace))),
+                                text = context.getString(
+                                    R.string.available_space,
+                                    Formatter.formatFileSize(context, storageInfo.availableSpace)
+                                ),
                                 style = MaterialTheme.typography.bodyMedium,
                                 color = Color.White,
                                 fontWeight = FontWeight.Medium
                             )
                             Text(
-                                text = context.getString(R.string.used_space, "%.1f".format(storageInfo.toGB(storageInfo.usedSpace))),
+                                text = context.getString(
+                                    R.string.used_space,
+                                    Formatter.formatFileSize(context, storageInfo.usedSpace)
+                                ),
                                 style = MaterialTheme.typography.bodyMedium,
                                 color = Color.White,
                                 fontWeight = FontWeight.Medium
@@ -307,7 +311,7 @@ fun DashboardScreen(
                             println("正在清理中，跳过点击")
                         }
                     },
-                    isEnabled = !isCleaning && (cacheSizeBytes > 0 || junkSizeBytes > 0 || duplicateSizeBytes > 0),
+                    isEnabled = !isCleaning && totalCleanableBytes > 0,
                     isLoading = isCleaning,
                     progress = cleaningProgress,
                     text = if (isCleaning) {
@@ -318,7 +322,10 @@ fun DashboardScreen(
                     subText = if (isCleaning) {
                         context.getString(R.string.progress_percentage, (cleaningProgress * 100).toInt())
                     } else {
-                        context.getString(R.string.estimated_free_space, "%.1f".format((cacheSizeBytes + junkSizeBytes + duplicateSizeBytes).toDouble() / (1024 * 1024 * 1024)))
+                        context.getString(
+                            R.string.estimated_free_space,
+                            Formatter.formatFileSize(context, totalCleanableBytes)
+                        )
                     }
                 )
                 

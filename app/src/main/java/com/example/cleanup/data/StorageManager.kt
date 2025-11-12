@@ -453,11 +453,4 @@ data class StorageInfo(
             0f
         }
     }
-    
-    /**
-     * 转换为GB
-     */
-    fun toGB(bytes: Long): Float {
-        return bytes / (1024f * 1024f * 1024f)
-    }
 }
