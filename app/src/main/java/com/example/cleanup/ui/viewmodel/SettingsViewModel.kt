@@ -9,6 +9,7 @@ import com.example.cleanup.data.SettingsManager
 import com.example.cleanup.data.LanguageOption
 import com.example.cleanup.data.AppVersionInfo
 import com.example.cleanup.data.NotificationManager
+import com.example.cleanup.data.AutoCleanupManager
 import com.example.cleanup.work.EVENT_17
 import com.example.cleanup.work.EVENT_22
 import com.example.cleanup.work.EVENT_23
@@ -20,6 +21,7 @@ import kotlinx.coroutines.launch
 class SettingsViewModel(application: Application) : AndroidViewModel(application) {
     
     private val settingsManager = SettingsManager(application)
+    private val autoCleanupManager = AutoCleanupManager(application)
     private val notificationManager = NotificationManager(application)
     
     // 语言设置
@@ -79,6 +81,11 @@ class SettingsViewModel(application: Application) : AndroidViewModel(application
             EVENT_17(extra =  enabled.toString())
             settingsManager.setAutoCleanupEnabled(enabled)
             _autoCleanupEnabled.value = enabled
+            if (enabled) {
+                autoCleanupManager.scheduleAutoCleanupWork()
+            } else {
+                autoCleanupManager.cancelAutoCleanupWork()
+            }
         }
     }
     

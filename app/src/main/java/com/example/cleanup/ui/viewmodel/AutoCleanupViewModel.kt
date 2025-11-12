@@ -36,8 +36,7 @@ class AutoCleanupViewModel(application: Application) : AndroidViewModel(applicat
     val enabledCleanupTypes: StateFlow<Set<String>> = _enabledCleanupTypes.asStateFlow()
     
     init {
-        // 启动自动清理监控
-        autoCleanupManager.startAutoCleanupMonitoring(viewModelScope)
+        autoCleanupManager.scheduleAutoCleanupWork()
     }
     
     /**
