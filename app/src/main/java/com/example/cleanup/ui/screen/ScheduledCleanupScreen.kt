@@ -43,6 +43,7 @@ import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -56,28 +57,14 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.example.cleanup.R
+import com.example.cleanup.data.CleanupFrequency
+import com.example.cleanup.data.ScheduledCleanup
+import com.example.cleanup.data.ScheduledCleanupRepository
+import com.example.cleanup.data.ScheduledCleanupType
 import com.example.cleanup.ui.theme.PrimaryGradient
 import com.example.cleanup.ui.theme.SuccessGreen
 import com.example.cleanup.work.EVENT_20
-
-data class ScheduledCleanup(
-    val id: String,
-    val name: String,
-    val isEnabled: Boolean,
-    val frequency: CleanupFrequency,
-    val time: String,
-    val cleanupTypes: List<ScheduledCleanupType>,
-    val lastRun: Long?,
-    val nextRun: Long
-)
-
-enum class CleanupFrequency {
-    DAILY, WEEKLY, MONTHLY
-}
-
-enum class ScheduledCleanupType {
-    CACHE, JUNK, DUPLICATE, LARGE_FILES
-}
+import java.util.UUID
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -86,50 +73,19 @@ fun ScheduledCleanupScreen(
     onNavigateBack: () -> Unit = {}
 ) {
     val context = LocalContext.current
-    
+    val repository = remember(context) { ScheduledCleanupRepository(context) }
+
     // 控制添加任务对话框显示
     var showAddTaskDialog by remember { mutableStateOf(false) }
-    
+
     // 控制编辑任务对话框显示
     var showEditTaskDialog by remember { mutableStateOf(false) }
     var editingTask by remember { mutableStateOf<ScheduledCleanup?>(null) }
-    
-    // 模拟定时清理数据
-    var scheduledCleanups by remember {
-        mutableStateOf(
-            listOf(
-                ScheduledCleanup(
-                    id = "1",
-                    name = "Daily Auto Cleanup",
-                    isEnabled = true,
-                    frequency = CleanupFrequency.DAILY,
-                    time = "02:00",
-                    cleanupTypes = listOf(ScheduledCleanupType.CACHE, ScheduledCleanupType.JUNK),
-                    lastRun = System.currentTimeMillis() - 3600000, // 1小时前
-                    nextRun = System.currentTimeMillis() + 23 * 3600000 // 23小时后
-                ),
-                ScheduledCleanup(
-                    id = "2",
-                    name = "Weekly Deep Cleanup",
-                    isEnabled = true,
-                    frequency = CleanupFrequency.WEEKLY,
-                    time = "03:00",
-                    cleanupTypes = listOf(ScheduledCleanupType.CACHE, ScheduledCleanupType.JUNK, ScheduledCleanupType.DUPLICATE),
-                    lastRun = System.currentTimeMillis() - 6 * 86400000, // 6天前
-                    nextRun = System.currentTimeMillis() + 86400000 // 1天后
-                ),
-                ScheduledCleanup(
-                    id = "3",
-                    name = "Monthly Large File Cleanup",
-                    isEnabled = false,
-                    frequency = CleanupFrequency.MONTHLY,
-                    time = "04:00",
-                    cleanupTypes = listOf(ScheduledCleanupType.LARGE_FILES, ScheduledCleanupType.DUPLICATE),
-                    lastRun = System.currentTimeMillis() - 25 * 86400000, // 25天前
-                    nextRun = System.currentTimeMillis() + 5 * 86400000 // 5天后
-                )
-            )
-        )
+
+    var scheduledCleanups by remember { mutableStateOf(emptyList<ScheduledCleanup>()) }
+
+    LaunchedEffect(Unit) {
+        scheduledCleanups = repository.getScheduledCleanups()
     }
     
     val enabledCount = scheduledCleanups.count { it.isEnabled }
@@ -218,21 +174,15 @@ fun ScheduledCleanupScreen(
                 items(scheduledCleanups) { cleanup ->
                     ScheduledCleanupItem(
                         cleanup = cleanup,
-                        onToggleEnabled = { 
-                            scheduledCleanups = scheduledCleanups.map { task ->
-                                if (task.id == cleanup.id) {
-                                    task.copy(isEnabled = !task.isEnabled)
-                                } else {
-                                    task
-                                }
-                            }
+                        onToggleEnabled = {
+                            scheduledCleanups = repository.toggleScheduledCleanup(cleanup.id)
                         },
                         onEdit = { 
                             editingTask = cleanup
                             showEditTaskDialog = true
                         },
-                        onDelete = { 
-                            scheduledCleanups = scheduledCleanups.filter { it.id != cleanup.id }
+                        onDelete = {
+                            scheduledCleanups = repository.deleteScheduledCleanup(cleanup.id)
                         }
                     )
                 }
@@ -281,7 +231,7 @@ fun ScheduledCleanupScreen(
     if (showAddTaskDialog) {
         AddScheduledCleanupDialog(
             onAddTask = { newTask ->
-                scheduledCleanups = scheduledCleanups + newTask
+                scheduledCleanups = repository.addScheduledCleanup(newTask)
                 showAddTaskDialog = false
             },
             onDismiss = { showAddTaskDialog = false }
@@ -293,13 +243,7 @@ fun ScheduledCleanupScreen(
         EditScheduledCleanupDialog(
             task = editingTask!!,
             onUpdateTask = { updatedTask ->
-                scheduledCleanups = scheduledCleanups.map { task ->
-                    if (task.id == updatedTask.id) {
-                        updatedTask
-                    } else {
-                        task
-                    }
-                }
+                scheduledCleanups = repository.updateScheduledCleanup(updatedTask)
                 showEditTaskDialog = false
                 editingTask = null
             },
@@ -715,7 +659,7 @@ private fun AddScheduledCleanupDialog(
                     onClick = {
                         if (taskName.isNotBlank() && selectedTypes.isNotEmpty()) {
                             val newTask = ScheduledCleanup(
-                                id = System.currentTimeMillis().toString(),
+                                id = UUID.randomUUID().toString(),
                                 name = taskName,
                                 isEnabled = true,
                                 frequency = selectedFrequency,
