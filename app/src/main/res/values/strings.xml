@@ -1,0 +1,188 @@
+<resources>
+    <string name="app_name">CleanSpace</string>
+    
+    <!-- 主页面 -->
+    <string name="dashboard_title">CleanSpace</string>
+    <string name="storage_overview">存储空间概览</string>
+    <string name="one_click_cleanup">一键智能清理</string>
+    <string name="cleanup_in_progress">清理中...</string>
+    <string name="cleanup_details">清理详情</string>
+    <string name="cache">缓存</string>
+    <string name="junk">垃圾</string>
+    <string name="duplicate">重复</string>
+    <string name="estimated_free_space">预计可释放: %1$sGB</string>
+    <string name="progress_percentage">进度: %1$d%%</string>
+    <string name="used_space">已用: %1$sGB</string>
+    <string name="available_space">可用: %1$sGB</string>
+    <string name="usage_percentage">使用率</string>
+    <string name="used">已用</string>
+    <string name="available">可用</string>
+    
+    <!-- 设置页面 -->
+    <string name="settings">设置</string>
+    <string name="language">语言</string>
+    <string name="language_settings">语言设置</string>
+    <string name="auto_cleanup">自动清理</string>
+    <string name="about">关于</string>
+    <string name="version">版本</string>
+    <string name="back">返回</string>
+    <string name="enabled">已启用</string>
+    <string name="disabled">已禁用</string>
+    <string name="scheduled_cleanup_desc">设置自动清理时间</string>
+    <string name="app_management_permissions">应用管理权限</string>
+    <string name="app_management_permissions_desc">查看和清理其他应用缓存</string>
+    <string name="notifications">通知</string>
+    <string name="safe_mode">安全模式</string>
+    <string name="advanced_features">高级功能</string>
+    <string name="select_language">选择您偏好的语言</string>
+    <string name="refresh_data">刷新数据</string>
+    <string name="view_app_usage">查看应用占用</string>
+    <string name="find_large_files">查找大文件</string>
+    <string name="view_history">查看历史记录</string>
+    
+    <!-- 应用管理 -->
+    <string name="app_storage_stats">应用存储统计</string>
+    <string name="total_apps">总应用数</string>
+    <string name="total_storage">总占用空间</string>
+    <string name="cleanable_cache">可清理缓存</string>
+    <string name="show_system_apps">显示系统应用</string>
+    <string name="size">大小</string>
+    <string name="name">名称</string>
+    <string name="usage_time">使用时间</string>
+    <string name="total_size">总大小</string>
+    <string name="clear_cache">清理缓存</string>
+    <string name="uninstall_app">卸载应用</string>
+    
+    <!-- 大文件扫描 -->
+    <string name="large_file_stats">大文件统计</string>
+    <string name="large_file_count">大文件数量</string>
+    <string name="total_occupied_space">总占用空间</string>
+    <string name="selected">已选择</string>
+    <string name="date">日期</string>
+    <string name="scanning_large_files">正在扫描大文件...</string>
+    <string name="selected_files_count">已选择 %1$d 个文件</string>
+    <string name="releasable_space">可释放空间</string>
+    <string name="delete_selected_files">删除选中文件</string>
+    <string name="file_size">大小</string>
+    <string name="modified_time">修改时间</string>
+    <string name="delete_file">删除文件</string>
+    
+    <!-- 清理历史 -->
+    <string name="cleanup_stats">清理统计</string>
+    <string name="cleanup_count">清理次数</string>
+    <string name="total_freed_space">总释放空间</string>
+    <string name="average_freed">平均释放</string>
+    <string name="this_week">本周</string>
+    <string name="this_month">本月</string>
+    <string name="all">全部</string>
+    <string name="no_cleanup_records">暂无清理记录</string>
+    <string name="cleanup_records_will_show_here">开始清理后，记录将显示在这里</string>
+    <string name="manual_cleanup">手动清理</string>
+    <string name="duration_seconds">耗时 %1$d秒</string>
+    <string name="delete_record">删除记录</string>
+    <string name="size_with_count">%1$s (%2$d项)</string>
+    
+    <!-- 定时清理 -->
+    <string name="scheduled_cleanup_stats">定时清理统计</string>
+    <string name="total_tasks">总任务数</string>
+    <string name="add_new_scheduled_task">添加新的定时清理任务</string>
+    <string name="last_run">上次运行</string>
+    <string name="never_run">从未运行</string>
+    <string name="next_run">下次运行</string>
+    <string name="edit">编辑</string>
+    <string name="delete">删除</string>
+    <string name="add_scheduled_cleanup_task">添加定时清理任务</string>
+    <string name="close">关闭</string>
+    <string name="task_name">任务名称</string>
+    <string name="task_name_placeholder">e.g.: Daily Auto Cleanup</string>
+    <string name="execution_frequency">执行频率</string>
+    <string name="execution_time">执行时间</string>
+    <string name="time_hh_mm">时间 (HH:MM)</string>
+    <string name="cleanup_type">清理类型</string>
+    <string name="duplicate_files">重复文件</string>
+    <string name="large_files">大文件</string>
+    <string name="add_task">添加任务</string>
+    <string name="save_changes">保存更改</string>
+    <string name="edit_scheduled_cleanup_task">编辑定时清理任务</string>
+    <string name="cancel">取消</string>
+    
+    <!-- 权限设置 -->
+    <string name="permission_settings">权限设置</string>
+    <string name="app_management_permissions_title">应用管理权限</string>
+    <string name="permission_description">为了能够查看和清理其他应用的缓存，需要以下权限：</string>
+    <string name="storage_permission">存储权限</string>
+    <string name="storage_permission_desc">允许应用访问设备存储，查看缓存文件</string>
+    <string name="usage_stats_permission">应用使用统计权限</string>
+    <string name="usage_stats_permission_desc">允许应用查看其他应用的使用情况和缓存信息</string>
+    <string name="query_all_packages_permission">查询所有包权限</string>
+    <string name="query_all_packages_permission_desc">允许应用查询设备上安装的所有应用包</string>
+    <string name="important_notice">重要说明</string>
+    <string name="permission_notice">1. 由于Android安全限制，普通应用无法直接访问其他应用的内部缓存\n2. 即使获得权限，也只能访问部分可访问的缓存目录\n3. 系统应用和受保护的应用缓存通常无法访问\n4. 卸载功能会调用系统卸载界面，需要用户确认</string>
+    <string name="refresh_permission_status">刷新权限状态</string>
+    <string name="current_permission_status">当前权限状态</string>
+    <string name="granted">已授权</string>
+    <string name="not_granted">未授权</string>
+    <string name="grant">授权</string>
+    
+    <!-- 关于应用 -->
+    <string name="about_app">关于应用</string>
+    <string name="app_introduction">应用介绍</string>
+    <string name="app_description">Cleanup是一款专业的手机清理工具，帮助您轻松管理设备存储空间，清理缓存文件、垃圾文件和重复文件，让您的设备运行更加流畅。</string>
+    <string name="main_features">主要功能</string>
+    <string name="technical_info">技术信息</string>
+    <string name="version_number">版本号</string>
+    <string name="build_number">构建号</string>
+    <string name="package_name">包名</string>
+    <string name="development_framework">开发框架</string>
+    <string name="minimum_system">最低系统</string>
+    <string name="smart_storage_analysis">智能存储分析</string>
+    <string name="one_click_cache_cleanup">一键清理缓存</string>
+    <string name="junk_file_cleanup">垃圾文件清理</string>
+    <string name="duplicate_file_detection">重复文件检测</string>
+    <string name="large_file_scan">大文件扫描</string>
+    <string name="app_management">应用管理</string>
+    <string name="scheduled_cleanup">定时清理</string>
+    <string name="cleanup_history">清理历史记录</string>
+    
+    <!-- 自动清理设置 -->
+    <string name="auto_cleanup_settings">自动清理设置</string>
+    <string name="auto_cleanup_status">自动清理状态</string>
+    <string name="cleaning_in_progress">正在清理...</string>
+    <string name="click_to_trigger_cleanup">点击手动触发清理</string>
+    <string name="cleanup_frequency">清理频率</string>
+    <string name="storage_threshold">存储阈值</string>
+    <string name="cleanup_types">清理类型</string>
+    <string name="cleanup_types_details">清理类型详情</string>
+    <string name="app_cache">应用缓存</string>
+    <string name="junk_files">垃圾文件</string>
+    <string name="temp_files">临时文件</string>
+    <string name="log_files">日志文件</string>
+    <string name="no_auto_cleanup_executed">尚未执行自动清理</string>
+    <string name="last_cleanup_freed">上次清理释放了 %1$s</string>
+    <string name="last_cleanup_failed">上次清理失败: %1$s</string>
+    <string name="unknown_error">未知错误</string>
+    <string name="daily">每天</string>
+    <string name="weekly">每周</string>
+    <string name="monthly">每月</string>
+    <string name="manual">手动</string>
+    <string name="auto_cleanup_when_storage_reaches">当存储使用率达到 %1$d%% 时自动清理</string>
+    <string name="none">无</string>
+    <string name="and_others_count">等%1$d项</string>
+    
+    <!-- 语言选项 -->
+    <string name="language_chinese">中文</string>
+    <string name="language_english">English</string>
+    <string name="language_polish">Polski</string>
+    <string name="language_thai">ไทย</string>
+    
+    <!-- 语言本地名称 -->
+    <string name="language_native_chinese">简体中文</string>
+    <string name="language_native_english">English</string>
+    <string name="language_native_polish">Polski</string>
+    <string name="language_native_thai">ไทย</string>
+    
+    <!-- 通用 -->
+    <string name="gb">GB</string>
+    <string name="mb">MB</string>
+    <string name="kb">KB</string>
+</resources>

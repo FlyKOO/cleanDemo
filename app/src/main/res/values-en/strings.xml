@@ -1,0 +1,190 @@
+<resources>
+    <string name="app_name">CleanSpace</string>
+    
+    <!-- Main Screen -->
+    <string name="dashboard_title">CleanSpace</string>
+    <string name="storage_overview">Storage Overview</string>
+    <string name="one_click_cleanup">One-Click Smart Cleanup</string>
+    <string name="cleanup_in_progress">Cleaning...</string>
+    <string name="cleanup_details">Cleanup Details</string>
+    <string name="cache">Cache</string>
+    <string name="junk">Junk</string>
+    <string name="duplicate">Duplicate</string>
+    <string name="estimated_free_space">Estimated free space: %1$sGB</string>
+    <string name="progress_percentage">Progress: %1$d%%</string>
+    <string name="used_space">Used: %1$sGB</string>
+    <string name="available_space">Available: %1$sGB</string>
+    <string name="used">Used</string>
+    <string name="available">Available</string>
+    <string name="usage_percentage">Usage</string>
+    
+    <!-- Settings Screen -->
+    <string name="settings">Settings</string>
+    <string name="language">Language</string>
+    <string name="language_settings">Language Settings</string>
+    <string name="auto_cleanup">Auto Cleanup</string>
+    <string name="about">About</string>
+    <string name="version">Version</string>
+    <string name="back">Back</string>
+    <string name="enabled">Enabled</string>
+    <string name="disabled">Disabled</string>
+    <string name="scheduled_cleanup_desc">Set automatic cleanup time</string>
+    <string name="app_management_permissions">App Management Permissions</string>
+    <string name="app_management_permissions_desc">View and clean other app caches</string>
+    <string name="notifications">Notifications</string>
+    <string name="safe_mode">Safe Mode</string>
+    <string name="advanced_features">Advanced Features</string>
+    <string name="select_language">Select your preferred language</string>
+    <string name="refresh_data">Refresh Data</string>
+    <string name="view_app_usage">Manage Apps</string>
+    <string name="find_large_files">Find Files</string>
+    <string name="view_history">View Records</string>
+    
+    <!-- App Management -->
+    <string name="app_storage_stats">App Storage Stats</string>
+    <string name="total_apps">Total Apps</string>
+    <string name="total_storage">Total Storage</string>
+    <string name="cleanable_cache">Cleanable Cache</string>
+    <string name="show_system_apps">Show System Apps</string>
+    <string name="size">Size</string>
+    <string name="name">Name</string>
+    <string name="usage_time">Usage Time</string>
+    <string name="total_size">Total Size</string>
+    <string name="clear_cache">Clear Cache</string>
+    <string name="uninstall_app">Uninstall App</string>
+    
+    <!-- Large File Scan -->
+    <string name="large_file_stats">Large File Stats</string>
+    <string name="large_file_count">Large File Count</string>
+    <string name="total_occupied_space">Total Occupied Space</string>
+    <string name="selected">Selected</string>
+    <string name="date">Date</string>
+    <string name="scanning_large_files">Scanning large files...</string>
+    <string name="selected_files_count">%1$d files selected</string>
+    <string name="releasable_space">Releasable Space</string>
+    <string name="delete_selected_files">Delete Selected Files</string>
+    <string name="file_size">Size</string>
+    <string name="modified_time">Modified Time</string>
+    <string name="delete_file">Delete File</string>
+    
+    <!-- Cleanup History -->
+    <string name="cleanup_stats">Cleanup Stats</string>
+    <string name="cleanup_count">Cleanup Count</string>
+    <string name="total_freed_space">Total Freed Space</string>
+    <string name="average_freed">Average Freed</string>
+    <string name="this_week">This Week</string>
+    <string name="this_month">This Month</string>
+    <string name="all">All</string>
+    <string name="no_cleanup_records">No cleanup records</string>
+    <string name="cleanup_records_will_show_here">Records will show here after cleanup</string>
+    <string name="manual_cleanup">Manual Cleanup</string>
+    <string name="duration_seconds">Duration %1$ds</string>
+    <string name="delete_record">Delete Record</string>
+    <string name="size_with_count">%1$s (%2$d items)</string>
+    
+    <!-- Scheduled Cleanup -->
+    <string name="scheduled_cleanup_stats">Scheduled Cleanup Stats</string>
+    <string name="total_tasks">Total Tasks</string>
+    <string name="add_new_scheduled_task">Add New Scheduled Cleanup Task</string>
+    <string name="last_run">Last Run</string>
+    <string name="never_run">Never Run</string>
+    <string name="next_run">Next Run</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="add_scheduled_cleanup_task">Add Scheduled Cleanup Task</string>
+    <string name="close">Close</string>
+    <string name="task_name">Task Name</string>
+    <string name="task_name_placeholder">e.g.: Daily Auto Cleanup</string>
+    <string name="execution_frequency">Execution Frequency</string>
+    <string name="execution_time">Execution Time</string>
+    <string name="time_hh_mm">Time (HH:MM)</string>
+    <string name="cleanup_type">Cleanup Type</string>
+    <string name="duplicate_files">Duplicate Files</string>
+    <string name="large_files">Large Files</string>
+    <string name="add_task">Add Task</string>
+    <string name="save_changes">Save Changes</string>
+    <string name="edit_scheduled_cleanup_task">Edit Scheduled Cleanup Task</string>
+    <string name="cancel">Cancel</string>
+    
+    <!-- Permission Settings -->
+    <string name="permission_settings">Permission Settings</string>
+    <string name="app_management_permissions_title">App Management Permissions</string>
+    <string name="permission_description">To view and clean cache of other apps, the following permissions are required:</string>
+    <string name="storage_permission">Storage Permission</string>
+    <string name="storage_permission_desc">Allow app to access device storage and view cache files</string>
+    <string name="usage_stats_permission">Usage Stats Permission</string>
+    <string name="usage_stats_permission_desc">Allow app to view usage statistics and cache information of other apps</string>
+    <string name="query_all_packages_permission">Query All Packages Permission</string>
+    <string name="query_all_packages_permission_desc">Allow app to query all installed app packages on device</string>
+    <string name="important_notice">Important Notice</string>
+    <string name="permission_notice">1. Due to Android security restrictions, regular apps cannot directly access internal cache of other apps\n2. Even with permissions, only partially accessible cache directories can be accessed\n3. System apps and protected app cache are usually inaccessible\n4. Uninstall function will call system uninstall interface, user confirmation required</string>
+    <string name="refresh_permission_status">Refresh Permission Status</string>
+    <string name="current_permission_status">Current Permission Status</string>
+    <string name="granted">Granted</string>
+    <string name="not_granted">Not Granted</string>
+    <string name="grant">Grant</string>
+    
+    <!-- About App -->
+    <string name="about_app">About App</string>
+    <string name="app_introduction">App Introduction</string>
+    <string name="app_description">Cleanup is a professional mobile cleaning tool that helps you easily manage device storage space, clean cache files, junk files and duplicate files, making your device run more smoothly.</string>
+    <string name="main_features">Main Features</string>
+    <string name="technical_info">Technical Information</string>
+    <string name="version_number">Version Number</string>
+    <string name="build_number">Build Number</string>
+    <string name="package_name">Package Name</string>
+    <string name="development_framework">Development Framework</string>
+    <string name="minimum_system">Minimum System</string>
+    <string name="smart_storage_analysis">Smart Storage Analysis</string>
+    <string name="one_click_cache_cleanup">One-Click Cache Cleanup</string>
+    <string name="junk_file_cleanup">Junk File Cleanup</string>
+    <string name="duplicate_file_detection">Duplicate File Detection</string>
+    <string name="large_file_scan">Large File Scan</string>
+    <string name="app_management">App Management</string>
+    <string name="scheduled_cleanup">Scheduled Cleanup</string>
+    <string name="cleanup_history">Cleanup History</string>
+    
+    <!-- Auto Cleanup Settings -->
+    <string name="auto_cleanup_settings">Auto Cleanup Settings</string>
+    <string name="auto_cleanup_status">Auto Cleanup Status</string>
+    <string name="cleaning_in_progress">Cleaning...</string>
+    <string name="click_to_trigger_cleanup">Click to trigger cleanup</string>
+    <string name="cleanup_frequency">Cleanup Frequency</string>
+    <string name="storage_threshold">Storage Threshold</string>
+    <string name="cleanup_types">Cleanup Types</string>
+    <string name="cleanup_types_details">Cleanup Types Details</string>
+    <string name="app_cache">App Cache</string>
+    <string name="junk_files">Junk Files</string>
+    <string name="temp_files">Temp Files</string>
+    <string name="log_files">Log Files</string>
+    <string name="no_auto_cleanup_executed">No auto cleanup executed yet</string>
+    <string name="last_cleanup_freed">Last cleanup freed %1$s</string>
+    <string name="last_cleanup_failed">Last cleanup failed: %1$s</string>
+    <string name="unknown_error">Unknown error</string>
+    <string name="daily">Daily</string>
+    <string name="weekly">Weekly</string>
+    <string name="monthly">Monthly</string>
+    <string name="manual">Manual</string>
+    <string name="auto_cleanup_when_storage_reaches">Auto cleanup when storage reaches %1$d%%</string>
+    <string name="none">None</string>
+    <string name="and_others_count">and %1$d others</string>
+    
+    <!-- Language Options -->
+    <string name="language_chinese">中文</string>
+    <string name="language_english">English</string>
+    <string name="language_polish">Polski</string>
+    <string name="language_thai">ไทย</string>
+    
+    <!-- Language Native Names -->
+    <string name="language_native_chinese">Simplified Chinese</string>
+    <string name="language_native_english">English</string>
+    <string name="language_native_polish">Polish</string>
+    <string name="language_native_thai">Thai</string>
+    
+    <!-- Common -->
+    <string name="gb">GB</string>
+    <string name="mb">MB</string>
+    <string name="kb">KB</string>
+</resources>
+
+

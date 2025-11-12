@@ -1,0 +1,187 @@
+<resources>
+    <string name="app_name">CleanSpace</string>
+    
+    <!-- Główny ekran -->
+    <string name="dashboard_title">CleanSpace</string>
+    <string name="storage_overview">Przegląd pamięci</string>
+    <string name="one_click_cleanup">Inteligentne czyszczenie jednym kliknięciem</string>
+    <string name="cleanup_in_progress">Czyszczenie...</string>
+    <string name="cleanup_details">Szczegóły czyszczenia</string>
+    <string name="cache">Pamięć podręczna</string>
+    <string name="junk">Śmieci</string>
+    <string name="duplicate">Duplikaty</string>
+    <string name="estimated_free_space">Szacowana wolna przestrzeń: %1$sGB</string>
+    <string name="progress_percentage">Postęp: %1$d%%</string>
+    <string name="used_space">Używane: %1$sGB</string>
+    <string name="available_space">Dostępne: %1$sGB</string>
+    <string name="used">Używane</string>
+    <string name="available">Dostępne</string>
+    <string name="usage_percentage">Użycie</string>
+    
+    <!-- Ekran ustawień -->
+    <string name="settings">Ustawienia</string>
+    <string name="language">Język</string>
+    <string name="language_settings">Ustawienia języka</string>
+    <string name="auto_cleanup">Automatyczne</string>
+    <string name="about">O aplikacji</string>
+    <string name="version">Wersja</string>
+    
+    <!-- Opcje językowe -->
+    <string name="language_chinese">中文</string>
+    <string name="language_english">English</string>
+    <string name="language_polish">Polski</string>
+    <string name="language_thai">ไทย</string>
+    
+    <!-- Nazwy językowe -->
+    <string name="language_native_chinese">Chiński uproszczony</string>
+    <string name="language_native_english">Angielski</string>
+    <string name="language_native_polish">Polski</string>
+    <string name="language_native_thai">Tajski</string>
+    
+    <string name="back">Wstecz</string>
+    <string name="enabled">Włączone</string>
+    <string name="disabled">Wyłączone</string>
+    <string name="scheduled_cleanup_desc">Ustaw czas automatycznego czyszczenia</string>
+    <string name="app_management_permissions">Uprawnienia zarządzania aplikacjami</string>
+    <string name="app_management_permissions_desc">Wyświetl i czyść pamięć podręczną innych aplikacji</string>
+    <string name="notifications">Powiadomienia</string>
+    <string name="safe_mode">Tryb bezpieczny</string>
+    <string name="advanced_features">Funkcje zaawansowane</string>
+    <string name="scheduled_cleanup_stats">Statystyki zaplanowanego czyszczenia</string>
+    <string name="total_tasks">Łączna liczba zadań</string>
+    <string name="last_run">Ostatnie uruchomienie</string>
+    <string name="next_run">Następne uruchomienie</string>
+    <string name="never_run">Nigdy nie uruchomiono</string>
+    <string name="select_language">Wybierz preferowany język</string>
+    <string name="refresh_data">Odśwież dane</string>
+    <string name="view_app_usage">Zarządzaj</string>
+    <string name="find_large_files">Znajdź</string>
+    <string name="view_history">Zobacz</string>
+    
+    <!-- Zarządzanie aplikacjami -->
+    <string name="app_storage_stats">Statystyki aplikacji</string>
+    <string name="total_apps">Wszystkie</string>
+    <string name="total_storage">Całkowita</string>
+    <string name="cleanable_cache">Do czyszczenia</string>
+    <string name="show_system_apps">Pokaż systemowe</string>
+    <string name="size">Rozmiar</string>
+    <string name="name">Nazwa</string>
+    <string name="usage_time">Czas użycia</string>
+    <string name="total_size">Całkowity rozmiar</string>
+    <string name="clear_cache">Wyczyść pamięć</string>
+    <string name="uninstall_app">Odinstaluj</string>
+    
+    <!-- Skanowanie dużych plików -->
+    <string name="large_file_stats">Statystyki dużych plików</string>
+    <string name="large_file_count">Liczba plików</string>
+    <string name="total_occupied_space">Całkowita</string>
+    <string name="selected">Wybrane</string>
+    <string name="date">Data</string>
+    <string name="scanning_large_files">Skanowanie dużych plików...</string>
+    <string name="selected_files_count">Wybrano %1$d plików</string>
+    <string name="releasable_space">Przestrzeń do zwolnienia</string>
+    <string name="delete_selected_files">Usuń wybrane pliki</string>
+    <string name="file_size">Rozmiar</string>
+    <string name="modified_time">Czas modyfikacji</string>
+    <string name="delete_file">Usuń plik</string>
+    
+    <!-- Historia czyszczenia -->
+    <string name="cleanup_stats">Statystyki czyszczenia</string>
+    <string name="cleanup_count">Liczba</string>
+    <string name="total_freed_space">Całkowita</string>
+    <string name="average_freed">Średnia</string>
+    <string name="this_week">Ten tydzień</string>
+    <string name="this_month">Ten miesiąc</string>
+    <string name="all">Wszystkie</string>
+    <string name="no_cleanup_records">Brak rekordów</string>
+    <string name="cleanup_records_will_show_here">Rekordy pojawią się po czyszczeniu</string>
+    <string name="manual_cleanup">Ręczne</string>
+    <string name="duration_seconds">Czas: %1$ds</string>
+    <string name="delete_record">Usuń rekord</string>
+    <string name="size_with_count">%1$s (%2$d elementów)</string>
+    <string name="add_task">Dodaj zadanie</string>
+    <string name="add_new_scheduled_task">Dodaj nowe zaplanowane zadanie</string>
+    <string name="add_scheduled_cleanup_task">Dodaj zaplanowane zadanie</string>
+    <string name="save_changes">Zapisz zmiany</string>
+    <string name="edit_scheduled_cleanup_task">Edytuj zaplanowane zadanie czyszczenia</string>
+    <string name="cancel">Anuluj</string>
+    <string name="close">Zamknij</string>
+    <string name="task_name">Nazwa zadania</string>
+    <string name="task_name_placeholder">np.: Daily Auto Cleanup</string>
+    <string name="execution_frequency">Częstotliwość wykonywania</string>
+    <string name="execution_time">Czas wykonywania</string>
+    <string name="time_hh_mm">Czas (HH:MM)</string>
+    <string name="cleanup_type">Typ czyszczenia</string>
+    <string name="duplicate_files">Duplikaty plików</string>
+    <string name="large_files">Duże pliki</string>
+    
+    <!-- Ustawienia uprawnień -->
+    <string name="permission_settings">Ustawienia uprawnień</string>
+    <string name="app_management_permissions_title">Uprawnienia zarządzania aplikacjami</string>
+    <string name="permission_description">Aby przeglądać i czyścić cache innych aplikacji, wymagane są następujące uprawnienia:</string>
+    <string name="storage_permission">Uprawnienie do pamięci</string>
+    <string name="storage_permission_desc">Pozwól aplikacji na dostęp do pamięci urządzenia i przeglądanie plików cache</string>
+    <string name="usage_stats_permission">Uprawnienie do statystyk użycia</string>
+    <string name="usage_stats_permission_desc">Pozwól aplikacji na przeglądanie statystyk użycia i informacji o cache innych aplikacji</string>
+    <string name="query_all_packages_permission">Uprawnienie do zapytań o wszystkie pakiety</string>
+    <string name="query_all_packages_permission_desc">Pozwól aplikacji na zapytania o wszystkie zainstalowane pakiety aplikacji na urządzeniu</string>
+    <string name="important_notice">Ważna uwaga</string>
+    <string name="permission_notice">1. Ze względu na ograniczenia bezpieczeństwa Android, zwykłe aplikacje nie mogą bezpośrednio uzyskać dostępu do wewnętrznego cache innych aplikacji\n2. Nawet z uprawnieniami, można uzyskać dostęp tylko do częściowo dostępnych katalogów cache\n3. Cache aplikacji systemowych i chronionych jest zwykle niedostępny\n4. Funkcja odinstalowywania wywoła interfejs odinstalowywania systemu, wymagane potwierdzenie użytkownika</string>
+    <string name="refresh_permission_status">Odśwież status uprawnień</string>
+    <string name="current_permission_status">Aktualny status uprawnień</string>
+    <string name="granted">Przyznane</string>
+    <string name="not_granted">Nie przyznane</string>
+    <string name="grant">Przyznaj</string>
+    
+    <!-- O aplikacji -->
+    <string name="about_app">O aplikacji</string>
+    <string name="app_introduction">Wprowadzenie do aplikacji</string>
+    <string name="app_description">Cleanup to profesjonalne narzędzie do czyszczenia telefonu, które pomaga łatwo zarządzać przestrzenią dyskową urządzenia, czyścić pliki cache, pliki śmieci i duplikaty, dzięki czemu urządzenie działa płynniej.</string>
+    <string name="main_features">Główne funkcje</string>
+    <string name="technical_info">Informacje techniczne</string>
+    <string name="version_number">Numer wersji</string>
+    <string name="build_number">Numer kompilacji</string>
+    <string name="package_name">Nazwa pakietu</string>
+    <string name="development_framework">Framework deweloperski</string>
+    <string name="minimum_system">Minimalny system</string>
+    <string name="smart_storage_analysis">Inteligentna analiza pamięci</string>
+    <string name="one_click_cache_cleanup">Czyszczenie cache jednym kliknięciem</string>
+    <string name="junk_file_cleanup">Czyszczenie plików śmieci</string>
+    <string name="duplicate_file_detection">Wykrywanie duplikatów plików</string>
+    <string name="large_file_scan">Skanowanie dużych plików</string>
+    <string name="app_management">Zarządzanie aplikacjami</string>
+    <string name="scheduled_cleanup">Zaplanowane</string>
+    <string name="cleanup_history">Historia czyszczenia</string>
+    
+    <!-- Ustawienia automatycznego czyszczenia -->
+    <string name="auto_cleanup_settings">Ustawienia automatycznego czyszczenia</string>
+    <string name="auto_cleanup_status">Status automatycznego czyszczenia</string>
+    <string name="cleaning_in_progress">Czyszczenie...</string>
+    <string name="click_to_trigger_cleanup">Kliknij aby uruchomić czyszczenie</string>
+    <string name="cleanup_frequency">Częstotliwość czyszczenia</string>
+    <string name="storage_threshold">Próg pamięci</string>
+    <string name="cleanup_types">Typy czyszczenia</string>
+    <string name="cleanup_types_details">Szczegóły typów czyszczenia</string>
+    <string name="app_cache">Cache aplikacji</string>
+    <string name="junk_files">Pliki śmieci</string>
+    <string name="temp_files">Pliki tymczasowe</string>
+    <string name="log_files">Pliki dziennika</string>
+    <string name="no_auto_cleanup_executed">Nie wykonano jeszcze automatycznego czyszczenia</string>
+    <string name="last_cleanup_freed">Ostatnie czyszczenie zwolniło %1$s</string>
+    <string name="last_cleanup_failed">Ostatnie czyszczenie nie powiodło się: %1$s</string>
+    <string name="unknown_error">Nieznany błąd</string>
+    <string name="daily">Codziennie</string>
+    <string name="weekly">Tygodniowo</string>
+    <string name="monthly">Miesięcznie</string>
+    <string name="manual">Ręcznie</string>
+    <string name="auto_cleanup_when_storage_reaches">Automatyczne czyszczenie gdy pamięć osiągnie %1$d%%</string>
+    <string name="none">Brak</string>
+    <string name="and_others_count">i %1$d innych</string>
+    
+    <!-- Wspólne -->
+    <string name="gb">GB</string>
+    <string name="mb">MB</string>
+    <string name="kb">KB</string>
+</resources>
+
+

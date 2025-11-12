@@ -1,0 +1,188 @@
+<resources>
+    <string name="app_name">CleanSpace</string>
+    
+    <!-- หน้าจอหลัก -->
+    <string name="dashboard_title">CleanSpace</string>
+    <string name="storage_overview">ภาพรวมพื้นที่เก็บข้อมูล</string>
+    <string name="one_click_cleanup">ทำความสะอาดอัจฉริยะด้วยคลิกเดียว</string>
+    <string name="cleanup_in_progress">กำลังทำความสะอาด...</string>
+    <string name="cleanup_details">รายละเอียดการทำความสะอาด</string>
+    <string name="cache">แคช</string>
+    <string name="junk">ขยะ</string>
+    <string name="duplicate">ไฟล์ซ้ำ</string>
+    <string name="estimated_free_space">พื้นที่ว่างที่คาดการณ์: %1$sGB</string>
+    <string name="progress_percentage">ความคืบหน้า: %1$d%%</string>
+    <string name="used_space">ใช้แล้ว: %1$sGB</string>
+    <string name="available_space">ว่าง: %1$sGB</string>
+    <string name="used">ใช้แล้ว</string>
+    <string name="available">ว่าง</string>
+    <string name="usage_percentage">การใช้งาน</string>
+    
+    <!-- หน้าจอการตั้งค่า -->
+    <string name="settings">การตั้งค่า</string>
+    <string name="language">ภาษา</string>
+    <string name="language_settings">การตั้งค่าภาษา</string>
+    <string name="auto_cleanup">อัตโนมัติ</string>
+    <string name="about">เกี่ยวกับ</string>
+    <string name="version">เวอร์ชัน</string>
+    
+    <!-- ตัวเลือกภาษา -->
+    <string name="language_chinese">中文</string>
+    <string name="language_english">English</string>
+    <string name="language_polish">Polski</string>
+    <string name="language_thai">ไทย</string>
+    <string name="select_language">เลือกภาษาที่คุณต้องการ</string>
+    <string name="advanced_features">ฟีเจอร์ขั้นสูง</string>
+    <string name="scheduled_cleanup_stats">สถิติการทำความสะอาดตามกำหนด</string>
+    <string name="total_tasks">จำนวนงานทั้งหมด</string>
+    <string name="last_run">รันครั้งล่าสุด</string>
+    <string name="next_run">รันครั้งถัดไป</string>
+    <string name="never_run">ไม่เคยรัน</string>
+    
+    <!-- ชื่อภาษาท้องถิ่น -->
+    <string name="language_native_chinese">จีนตัวย่อ</string>
+    <string name="language_native_english">อังกฤษ</string>
+    <string name="language_native_polish">โปแลนด์</string>
+    <string name="language_native_thai">ไทย</string>
+    
+    <!-- 设置相关 -->
+    <string name="enabled">เปิดใช้งาน</string>
+    <string name="disabled">ปิดใช้งาน</string>
+    <string name="app_management_permissions">สิทธิ์การจัดการแอป</string>
+    <string name="app_management_permissions_desc">ดูและทำความสะอาดแคชของแอปอื่น</string>
+    <string name="notifications">การแจ้งเตือน</string>
+    <string name="safe_mode">โหมดปลอดภัย</string>
+    <string name="scheduled_cleanup_desc">ตั้งเวลาทำความสะอาดอัตโนมัติ</string>
+    <string name="back">กลับ</string>
+    
+    <string name="view_app_usage">จัดการ</string>
+    <string name="find_large_files">ค้นหา</string>
+    <string name="view_history">ดู</string>
+    
+    <!-- การจัดการแอป -->
+    <string name="app_storage_stats">สถิติแอป</string>
+    <string name="total_apps">แอปทั้งหมด</string>
+    <string name="total_storage">พื้นที่ทั้งหมด</string>
+    <string name="cleanable_cache">แคชที่ลบได้</string>
+    <string name="show_system_apps">แสดงระบบ</string>
+    <string name="size">ขนาด</string>
+    <string name="name">ชื่อ</string>
+    <string name="usage_time">เวลาการใช้</string>
+    <string name="total_size">ขนาดรวม</string>
+    <string name="clear_cache">ล้างแคช</string>
+    <string name="uninstall_app">ถอนการติดตั้ง</string>
+    
+    <!-- การสแกนไฟล์ขนาดใหญ่ -->
+    <string name="large_file_stats">สถิติไฟล์ใหญ่</string>
+    <string name="large_file_count">จำนวนไฟล์ใหญ่</string>
+    <string name="total_occupied_space">พื้นที่ทั้งหมด</string>
+    <string name="selected">เลือกแล้ว</string>
+    <string name="date">วันที่</string>
+    <string name="scanning_large_files">กำลังสแกนไฟล์ใหญ่...</string>
+    <string name="selected_files_count">เลือก %1$d ไฟล์</string>
+    <string name="releasable_space">พื้นที่ที่ปลดปล่อยได้</string>
+    <string name="delete_selected_files">ลบไฟล์ที่เลือก</string>
+    <string name="file_size">ขนาด</string>
+    <string name="modified_time">เวลาที่แก้ไข</string>
+    <string name="delete_file">ลบไฟล์</string>
+    
+    <!-- ประวัติการทำความสะอาด -->
+    <string name="cleanup_stats">สถิติการทำความสะอาด</string>
+    <string name="cleanup_count">จำนวนครั้ง</string>
+    <string name="total_freed_space">พื้นที่ทั้งหมด</string>
+    <string name="average_freed">เฉลี่ยที่ปลดปล่อย</string>
+    <string name="this_week">สัปดาห์นี้</string>
+    <string name="this_month">เดือนนี้</string>
+    <string name="all">ทั้งหมด</string>
+    <string name="no_cleanup_records">ไม่มีบันทึก</string>
+    <string name="cleanup_records_will_show_here">บันทึกจะแสดงที่นี่หลังทำความสะอาด</string>
+    <string name="manual_cleanup">ทำความสะอาด</string>
+    <string name="duration_seconds">ใช้เวลา %1$d วินาที</string>
+    <string name="delete_record">ลบบันทึก</string>
+    <string name="size_with_count">%1$s (%2$d รายการ)</string>
+    <string name="add_task">เพิ่มงาน</string>
+    <string name="add_new_scheduled_task">เพิ่มงานทำความสะอาดตามกำหนด</string>
+    <string name="add_scheduled_cleanup_task">เพิ่มงานตามกำหนด</string>
+    <string name="save_changes">บันทึกการเปลี่ยนแปลง</string>
+    <string name="edit_scheduled_cleanup_task">แก้ไขงานทำความสะอาดตามกำหนด</string>
+    <string name="cancel">ยกเลิก</string>
+    <string name="close">ปิด</string>
+    <string name="task_name">ชื่องาน</string>
+    <string name="task_name_placeholder">เช่น: Daily Auto Cleanup</string>
+    <string name="execution_frequency">ความถี่ในการดำเนินการ</string>
+    <string name="execution_time">เวลาดำเนินการ</string>
+    <string name="time_hh_mm">เวลา (HH:MM)</string>
+    <string name="cleanup_type">ประเภทการทำความสะอาด</string>
+    <string name="duplicate_files">ไฟล์ซ้ำ</string>
+    <string name="large_files">ไฟล์ขนาดใหญ่</string>
+    
+    <!-- การตั้งค่าสิทธิ์ -->
+    <string name="permission_settings">การตั้งค่าสิทธิ์</string>
+    <string name="app_management_permissions_title">สิทธิ์การจัดการแอป</string>
+    <string name="permission_description">เพื่อดูและล้างแคชของแอปอื่น ๆ จำเป็นต้องมีสิทธิ์ต่อไปนี้:</string>
+    <string name="storage_permission">สิทธิ์การจัดเก็บ</string>
+    <string name="storage_permission_desc">อนุญาตให้แอปเข้าถึงการจัดเก็บข้อมูลของอุปกรณ์และดูไฟล์แคช</string>
+    <string name="usage_stats_permission">สิทธิ์สถิติการใช้งาน</string>
+    <string name="usage_stats_permission_desc">อนุญาตให้แอปดูสถิติการใช้งานและข้อมูลแคชของแอปอื่น ๆ</string>
+    <string name="query_all_packages_permission">สิทธิ์การสอบถามแพ็คเกจทั้งหมด</string>
+    <string name="query_all_packages_permission_desc">อนุญาตให้แอปสอบถามแพ็คเกจแอปที่ติดตั้งทั้งหมดบนอุปกรณ์</string>
+    <string name="important_notice">หมายเหตุสำคัญ</string>
+    <string name="permission_notice">1. เนื่องจากข้อจำกัดด้านความปลอดภัยของ Android แอปทั่วไปไม่สามารถเข้าถึงแคชภายในของแอปอื่นได้โดยตรง\n2. แม้จะมีสิทธิ์ก็สามารถเข้าถึงได้เฉพาะไดเรกทอรีแคชที่เข้าถึงได้บางส่วน\n3. แคชของแอประบบและแอปที่ได้รับการป้องกันมักไม่สามารถเข้าถึงได้\n4. ฟังก์ชันการถอนการติดตั้งจะเรียกอินเทอร์เฟซการถอนการติดตั้งของระบบ ต้องมีการยืนยันจากผู้ใช้</string>
+    <string name="refresh_permission_status">รีเฟรชสถานะสิทธิ์</string>
+    <string name="current_permission_status">สถานะสิทธิ์ปัจจุบัน</string>
+    <string name="granted">ได้รับอนุญาต</string>
+    <string name="not_granted">ไม่ได้รับอนุญาต</string>
+    <string name="grant">อนุญาต</string>
+    
+    <!-- เกี่ยวกับแอป -->
+    <string name="about_app">เกี่ยวกับแอป</string>
+    <string name="app_introduction">แนะนำแอป</string>
+    <string name="app_description">Cleanup เป็นเครื่องมือทำความสะอาดมือถือระดับมืออาชีพที่ช่วยให้คุณจัดการพื้นที่จัดเก็บข้อมูลของอุปกรณ์ได้อย่างง่ายดาย ทำความสะอาดไฟล์แคช ไฟล์ขยะ และไฟล์ซ้ำ ทำให้อุปกรณ์ของคุณทำงานได้อย่างราบรื่นมากขึ้น</string>
+    <string name="main_features">ฟีเจอร์หลัก</string>
+    <string name="technical_info">ข้อมูลทางเทคนิค</string>
+    <string name="version_number">หมายเลขเวอร์ชัน</string>
+    <string name="build_number">หมายเลขบิลด์</string>
+    <string name="package_name">ชื่อแพ็คเกจ</string>
+    <string name="development_framework">เฟรมเวิร์กการพัฒนา</string>
+    <string name="minimum_system">ระบบขั้นต่ำ</string>
+    <string name="smart_storage_analysis">การวิเคราะห์พื้นที่จัดเก็บอัจฉริยะ</string>
+    <string name="one_click_cache_cleanup">ทำความสะอาดแคชด้วยคลิกเดียว</string>
+    <string name="junk_file_cleanup">ทำความสะอาดไฟล์ขยะ</string>
+    <string name="duplicate_file_detection">การตรวจจับไฟล์ซ้ำ</string>
+    <string name="large_file_scan">สแกนไฟล์ขนาดใหญ่</string>
+    <string name="app_management">การจัดการแอป</string>
+    <string name="scheduled_cleanup">ตามกำหนด</string>
+    <string name="cleanup_history">ประวัติการทำความสะอาด</string>
+    
+    <!-- การตั้งค่าการทำความสะอาดอัตโนมัติ -->
+    <string name="auto_cleanup_settings">การตั้งค่าการทำความสะอาดอัตโนมัติ</string>
+    <string name="auto_cleanup_status">สถานะการทำความสะอาดอัตโนมัติ</string>
+    <string name="cleaning_in_progress">กำลังทำความสะอาด...</string>
+    <string name="click_to_trigger_cleanup">คลิกเพื่อเริ่มทำความสะอาด</string>
+    <string name="cleanup_frequency">ความถี่ในการทำความสะอาด</string>
+    <string name="storage_threshold">เกณฑ์พื้นที่จัดเก็บ</string>
+    <string name="cleanup_types">ประเภทการทำความสะอาด</string>
+    <string name="cleanup_types_details">รายละเอียดประเภทการทำความสะอาด</string>
+    <string name="app_cache">แคชแอป</string>
+    <string name="junk_files">ไฟล์ขยะ</string>
+    <string name="temp_files">ไฟล์ชั่วคราว</string>
+    <string name="log_files">ไฟล์บันทึก</string>
+    <string name="no_auto_cleanup_executed">ยังไม่ได้ทำความสะอาดอัตโนมัติ</string>
+    <string name="last_cleanup_freed">การทำความสะอาดครั้งล่าสุดปลดปล่อย %1$s</string>
+    <string name="last_cleanup_failed">การทำความสะอาดครั้งล่าสุดล้มเหลว: %1$s</string>
+    <string name="unknown_error">ข้อผิดพลาดที่ไม่ทราบ</string>
+    <string name="daily">รายวัน</string>
+    <string name="weekly">รายสัปดาห์</string>
+    <string name="monthly">รายเดือน</string>
+    <string name="manual">ด้วยตนเอง</string>
+    <string name="auto_cleanup_when_storage_reaches">ทำความสะอาดอัตโนมัติเมื่อพื้นที่จัดเก็บถึง %1$d%%</string>
+    <string name="none">ไม่มี</string>
+    <string name="and_others_count">และอื่นๆ อีก %1$d รายการ</string>
+    
+    <!-- ทั่วไป -->
+    <string name="gb">GB</string>
+    <string name="mb">MB</string>
+    <string name="kb">KB</string>
+</resources>
+
+
